@@ -323,12 +323,17 @@
     let particles = [];
     let opCount = 0;
     const MAX_OPS = 50;
+    let mouse = { x: -1000, y: -1000 };
 
     function resize() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
     window.addEventListener('resize', resize);
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
     resize();
 
     class Particle {
@@ -343,18 +348,19 @@
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 1.5;
         this.vy = (Math.random() - 0.5) * 1.5;
-        this.radius = 15;
+        this.radius = 20;
         this.alpha = 1;
         this.glow = 0;
+        this.isDragged = false;
       }
 
       draw() {
         ctx.save();
-        ctx.globalAlpha = this.type === 'num' ? 0.4 : 0.6;
-        ctx.fillStyle = this.glow > 0 ? '#c8935f' : '#ffffff';
-        ctx.shadowBlur = this.glow;
+        ctx.globalAlpha = this.isDragged ? 0.9 : (this.type === 'num' ? 0.4 : 0.6);
+        ctx.fillStyle = (this.glow > 0 || this.isDragged) ? '#c8935f' : '#ffffff';
+        ctx.shadowBlur = this.isDragged ? 15 : this.glow;
         ctx.shadowColor = '#c8935f';
-        ctx.font = `${this.type === 'num' ? '16px' : '22px'} Inter`;
+        ctx.font = `${this.isDragged ? '28px' : (this.type === 'num' ? '16px' : '22px')} Inter`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(this.value, this.x, this.y);
@@ -363,8 +369,23 @@
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        let dx = this.x - mouse.x;
+        let dy = this.y - mouse.y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 100) {
+          this.isDragged = true;
+          // Segue o mouse suavemente
+          this.x -= (this.x - mouse.x) * 0.1;
+          this.y -= (this.y - mouse.y) * 0.1;
+          this.vx = (Math.random() - 0.5) * 2; // Dá um impulso ao soltar
+          this.vy = (Math.random() - 0.5) * 2;
+        } else {
+          this.isDragged = false;
+          this.x += this.vx;
+          this.y += this.vy;
+        }
+
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
       }
@@ -373,8 +394,8 @@
     function initParticles() {
       particles = [];
       opCount = 0;
-      for (let i = 0; i < 40; i++) particles.push(new Particle('num'));
-      for (let i = 0; i < 15; i++) particles.push(new Particle('op'));
+      for (let i = 0; i < 60; i++) particles.push(new Particle('num'));
+      for (let i = 0; i < 22; i++) particles.push(new Particle('op'));
     }
 
     function handleCollisions() {
