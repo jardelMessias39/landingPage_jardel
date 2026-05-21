@@ -8,10 +8,20 @@ O projeto foi desenvolvido utilizando tecnologias web modernas e limpas:
 
 - **HTML5**: Estrutura semântica.
 - **CSS3**: Estilização personalizada utilizando Flexbox e CSS Grid para responsividade.
-- **JavaScript (Vanilla)**: Lógica de menu mobile, animações de scroll e integração de formulário.
+- **JavaScript (Vanilla) & HTML5 Canvas**: Lógica avançada para animação de partículas matemáticas.
 - **Font Awesome**: Ícones modernos.
 - **Google Fonts**: Tipografia refinada com as fontes *Inter* e *Playfair Display*.
 - **Google Apps Script**: Backend serverless para processamento do formulário de contato.
+
+## 🧠 Diferencial Exclusivo: Math Particles Engine
+
+O site conta com um fundo dinâmico e interativo desenvolvido em **Canvas API** que simula um ecossistema matemático vivo:
+
+- **Lógica de Colisão**: Números flutuantes que, ao colidirem, se fundem através de somas.
+- **Operadores Inteligentes**: Sinais matemáticos (+, -, *, /) que buscam números próximos para realizar cálculos em tempo real.
+- **Interação Magnética**: O usuário pode interagir com os elementos usando o mouse; os números são atraídos e podem ser "arrastados", permitindo interferir na lógica das equações.
+- **Efeitos Visuais**: Micro-explosões de brilho (glow) a cada operação realizada.
+- **Ciclo Dinâmico**: O sistema se autorregula e reinicia (reset) após um número determinado de operações, garantindo fluidez eterna.
 
 ## ✨ Funcionalidades
 
