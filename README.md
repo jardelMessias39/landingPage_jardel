@@ -1,46 +1,32 @@
-# Jardel Messias - Portfolio Landing Page
+# Jardel Messias - Portfolio Landing Page (Surreal Edition) 🚀
 
-Esta é a landing page profissional de **Jardel Messias**, Desenvolvedor Fullstack. O site foi projetado para apresentar serviços, portfólio de projetos, tabela de preços e facilitar o contato direto com clientes através de formulário e WhatsApp.
+Esta é a landing page profissional de **Jardel Messias**, Desenvolvedor Fullstack. O projeto foi transformado em uma experiência digital imersiva, unindo lógica matemática avançada com design de alta performance.
 
 ## 🚀 Tecnologias Utilizadas
 
-O projeto foi desenvolvido utilizando tecnologias web modernas e limpas:
+- **HTML5 & CSS3**: Estrutura semântica e estilização avançada com Flexbox/Grid.
+- **JavaScript (ES6+)**: Lógica de orquestração e interatividade.
+- **HTML5 Canvas API**: Engine de partículas para o fundo dinâmico.
+- **CSS 3D Transforms**: Efeito de perspectiva e profundidade nos cards.
+- **Google Apps Script**: Backend serverless para o formulário de contato.
+- **Font Awesome & Google Fonts**: Identidade visual premium.
 
-- **HTML5**: Estrutura semântica.
-- **CSS3**: Estilização personalizada utilizando Flexbox e CSS Grid para responsividade.
-- **JavaScript (Vanilla) & HTML5 Canvas**: Lógica avançada para animação de partículas matemáticas.
-- **Font Awesome**: Ícones modernos.
-- **Google Fonts**: Tipografia refinada com as fontes *Inter* e *Playfair Display*.
-- **Google Apps Script**: Backend serverless para processamento do formulário de contato.
+## ✨ Diferenciais Técnicos "Fora da Curva"
 
-## 🧠 Diferencial Exclusivo: Math Particles Engine
+### 🧠 Math Particles Engine
+Um fundo vivo que simula um ecossistema lógico:
+- **Fusão de Dados**: Números que colidem e realizam operações aritméticas automaticamente.
+- **Interação Magnética**: O usuário pode "capturar" e arrastar os números com o mouse, interferindo na lógica do sistema.
+- **Reset Dinâmico**: Sistema auto-regulado que reinicia o ciclo após atingir um limite de operações.
 
-O site conta com um fundo dinâmico e interativo desenvolvido em **Canvas API** que simula um ecossistema matemático vivo:
+### 🧊 Efeito 3D Tilt (Perspectiva Dinâmica)
+Os cards de serviços e portfólio utilizam cálculos de trigonometria para se inclinarem em 3D conforme a posição do mouse, criando uma sensação de profundidade e "peso" digital.
 
-- **Lógica de Colisão**: Números flutuantes que, ao colidirem, se fundem através de somas.
-- **Operadores Inteligentes**: Sinais matemáticos (+, -, *, /) que buscam números próximos para realizar cálculos em tempo real.
-- **Interação Magnética**: O usuário pode interagir com os elementos usando o mouse; os números são atraídos e podem ser "arrastados", permitindo interferir na lógica das equações.
-- **Efeitos Visuais**: Micro-explosões de brilho (glow) a cada operação realizada.
-- **Ciclo Dinâmico**: O sistema se autorregula e reinicia (reset) após um número determinado de operações, garantindo fluidez eterna.
-
-## ✨ Funcionalidades
-
-- **Design Responsivo**: Adaptado para dispositivos móveis, tablets e desktops.
-- **Animações Fade-in**: Efeito de surgimento suave dos elementos ao rolar a página.
-- **Menu Mobile**: Navegação otimizada para smartphones.
-- **Formulário de Contato**: Envio de mensagens direto para integração via API.
-- **Botão flutuante/Links WhatsApp**: Facilidade de conversão para orçamentos rápidos.
-- **Seção de Portfólio**: Exibição visual dos principais projetos desenvolvidos.
-
-## 📂 Estrutura do Projeto
-
-```text
-/
-├── img/                # Imagens do projeto, fotos e capturas do portfólio
-├── index.html          # Arquivo principal do site
-├── styles.css          # Estilização completa e definições visuais
-└── README.md           # Documentação do projeto
-```
+### 📂 Estrutura Organizada (Arquitetura Limpa)
+O código foi refatorado seguindo boas práticas de separação de responsabilidades:
+- `index.html`: Conteúdo e estrutura.
+- `styles.css`: Identidade visual e animações.
+- `script.js`: Toda a inteligência e lógica do sistema concentrada e otimizada.
 
 ## 🛠️ Como rodar o projeto localmente
 
@@ -48,16 +34,13 @@ O site conta com um fundo dinâmico e interativo desenvolvido em **Canvas API** 
    ```bash
    git clone https://github.com/jardelMessias39/landingPage_jardel.git
    ```
-2. Navegue até a pasta do projeto.
-3. Abra o arquivo `index.html` em qualquer navegador ou utilize a extensão **Live Server** do VS Code / Servidor embutido do IntelliJ.
+2. Abra o arquivo `index.html` em qualquer navegador.
 
 ## 👤 Autor
 
-**Jardel Messias**
-- Desenvolvedor Fullstack
+**Jardel Messias** - *Orquestrador de Soluções Digitais*
 - [LinkedIn](https://www.linkedin.com/in/jardel-messias)
 - [GitHub](https://github.com/jardelMessias39)
-- Instagram: [@jardelmessias.dev](https://www.instagram.com/jardelmessias.dev)
 
 ---
-*Feito com ❤️ por Jardel Messias*
+*Este projeto demonstra que o desenvolvimento de software é a união perfeita entre lógica e arte.*

@@ -275,6 +275,17 @@
       color: #0a0a0f;
     }
 
+    .service-card, .portfolio-item, .price-card {
+      transition: transform 0.1s ease-out, box-shadow 0.3s;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .service-card:hover, .portfolio-item:hover, .price-card:hover {
+      box-shadow: 0 20px 40px rgba(200, 147, 95, 0.2);
+      z-index: 10;
+    }
+
     /* Services */
     .services-grid {
       display: grid;
@@ -474,6 +485,72 @@
       border-radius: 20px;
       border: 1px solid #c8935f;
       font-size: 0.85rem;
+    }
+
+    /* FAQ */
+    #faq {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(200, 147, 95, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: none;
+      color: white;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .faq-question i {
+      color: #c8935f;
+      transition: transform 0.3s;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-answer p {
+      padding: 20px;
+      color: #b0b0b0;
+    }
+
+    .faq-item.active {
+      border-color: #c8935f;
+      background: rgba(200, 147, 95, 0.05);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
     }
 
     /* Contact */
