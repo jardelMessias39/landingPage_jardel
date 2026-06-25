@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Post Instagram - Jardel Messias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        #post-canvas {
+            width: 1080px;
+            height: 1080px;
+            background: #0a0a0f;
+            position: relative;
+            border: 2px solid #c8935f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px;
+        }
+        #math-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .badge {
+            background: rgba(200, 147, 95, 0.2);
+            border: 1px solid #c8935f;
+            color: #c8935f;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+        h1 span { color: #c8935f; }
+        p {
+            color: #b0b0b0;
+            font-size: 1.8rem;
+            max-width: 800px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 60px;
+            color: #c8935f;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="post-canvas">
+        <canvas id="math-bg"></canvas>
+
+        <div class="content">
+            <div class="badge">Inovação & Lógica</div>
+            <h1>Seu site não é uma página.<br>É uma <span>Experiência.</span></h1>
+            <p>Desenvolvimento Fullstack de alta performance com design fora da curva.</p>
+        </div>
+
+        <div class="footer">PORTFOLIO.JARDELMESSIAS.COM.BR</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('math-bg');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 1080; canvas.height = 1080;
+        let particles = [];
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * 1080;
+                this.y = Math.random() * 1080;
+                this.vx = (Math.random() - 0.5) * 2;
+                this.vy = (Math.random() - 0.5) * 2;
+                this.val = Math.floor(Math.random() * 9) + 1;
+            }
+            draw() {
+                ctx.fillStyle = "#c8935f";
+                ctx.font = "24px Inter";
+                ctx.globalAlpha = 0.3;
+                ctx.fillText(this.val, this.x, this.y);
+            }
+            update() {
+                this.x += this.vx; this.y += this.vy;
+                if(this.x<0 || this.x>1080) this.vx*=-1;
+                if(this.y<0 || this.y>1080) this.vy*=-1;
+            }
+        }
+
+        for(let i=0; i<80; i++) particles.push(new Particle());
+
+        function animate() {
+            ctx.clearRect(0,0,1080,1080);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
