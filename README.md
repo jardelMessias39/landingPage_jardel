@@ -1,46 +1,32 @@
-# Jardel Messias - Portfolio Landing Page (Surreal Edition) 🚀
+# React + TypeScript + Vite
 
-Esta é a landing page profissional de **Jardel Messias**, Desenvolvedor Fullstack. O projeto foi transformado em uma experiência digital imersiva, unindo lógica matemática avançada com design de alta performance.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 🚀 Tecnologias Utilizadas
+Currently, two official plugins are available:
 
-- **HTML5 & CSS3**: Estrutura semântica e estilização avançada com Flexbox/Grid.
-- **JavaScript (ES6+)**: Lógica de orquestração e interatividade.
-- **HTML5 Canvas API**: Engine de partículas para o fundo dinâmico.
-- **CSS 3D Transforms**: Efeito de perspectiva e profundidade nos cards.
-- **Google Apps Script**: Backend serverless para o formulário de contato.
-- **Font Awesome & Google Fonts**: Identidade visual premium.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## ✨ Diferenciais Técnicos "Fora da Curva"
+## React Compiler
 
-### 🧠 Math Particles Engine
-Um fundo vivo que simula um ecossistema lógico:
-- **Fusão de Dados**: Números que colidem e realizam operações aritméticas automaticamente.
-- **Interação Magnética**: O usuário pode "capturar" e arrastar os números com o mouse, interferindo na lógica do sistema.
-- **Reset Dinâmico**: Sistema auto-regulado que reinicia o ciclo após atingir um limite de operações.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### 🧊 Efeito 3D Tilt (Perspectiva Dinâmica)
-Os cards de serviços e portfólio utilizam cálculos de trigonometria para se inclinarem em 3D conforme a posição do mouse, criando uma sensação de profundidade e "peso" digital.
+## Expanding the Oxlint configuration
 
-### 📂 Estrutura Organizada (Arquitetura Limpa)
-O código foi refatorado seguindo boas práticas de separação de responsabilidades:
-- `index.html`: Conteúdo e estrutura.
-- `styles.css`: Identidade visual e animações.
-- `script.js`: Toda a inteligência e lógica do sistema concentrada e otimizada.
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-## 🛠️ Como rodar o projeto localmente
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/jardelMessias39/landingPage_jardel.git
-   ```
-2. Abra o arquivo `index.html` em qualquer navegador.
-
-## 👤 Autor
-
-**Jardel Messias** - *Orquestrador de Soluções Digitais*
-- [LinkedIn](https://www.linkedin.com/in/jardel-messias)
-- [GitHub](https://github.com/jardelMessias39)
-
----
-*Este projeto demonstra que o desenvolvimento de software é a união perfeita entre lógica e arte.*
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

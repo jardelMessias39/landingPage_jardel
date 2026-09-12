@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardel Messias - Desenvolvedor Fullstack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  
+ 
+</head>
+
+<body>
+  <canvas id="math-canvas"></canvas>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#hero" class="logo">JM</a>
+      <button class="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#prices">Preços</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a
+            href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+            class="btn btn-primary" style="padding: 8px 20px;">Fale comigo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content fade-in">
+      <div class="hero-badge"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Simão Dias - SE</div>
+      <h1>Transformo ideias em soluções digitais.</h1>
+      <p>Desenvolvedor Fullstack — crio sites, aplicativos e sistemas sob medida.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+          class="btn btn-primary">Solicitar Orçamento</a>
+        <a href="#services" class="btn btn-outline">Ver Serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title fade-in">Serviços</h2>
+      <div class="services-grid fade-in">
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Criação de Sites e LP</h3>
+          <p>Sites responsivos e landing pages de alto impacto.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Desenvolvimento de Aplicativos</h3>
+          <p>Aplicativos mobile nativos ou multiplataforma.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Sistemas Web Personalizados</h3>
+          <p>Sob medida para o seu negócio.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-sitemap"></i>
+          <h3>Consultoria e Arquitetura</h3>
+          <p>Orientacão técnica para projetos digitais.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tools"></i>
+          <h3>Manutenção e Suporte Técnico</h3>
+          <p>Manutenção contínua e suporte especializado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <h2 class="section-title fade-in">Portfólio</h2>
+      <div class="portfolio-grid fade-in">
+        <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/app-Acaraje.jpeg'); background-size: cover; background-position: center; background-color: #FF8C00;">Acarajé do Diego</div>
+          <div class="portfolio-overlay">
+            <h3>Acarajé do Diego</h3>
+            <p>App delivery de comida (React Native)</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/DevBurge.jpeg'); background-size: cover; background-position: center; background-color: #6A0DAD;">DevBurge</div>
+          <div class="portfolio-overlay">
+            <h3>DevBurge</h3>
+            <p>Site de hamburgueria delivery (Next.js)</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/CondutorPro.png'); background-size: cover; background-position: center; background-color: #003366;">CondutorPro</div>
+          <div class="portfolio-overlay">
+            <h3>CondutorPro</h3>
+            <p>Plataforma de autoescola (React)</p>
+          </div>
+        </div>
+         <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/AgendaLivreAí.png'); background-size: cover; background-position: center; background-color: #003366;">AgendaLivreAí</div>
+          <div class="portfolio-overlay">
+            <h3>AgendaLivreAí</h3>
+            <p>SaaS de Agendamento (React)</p>
+          </div>
+        </div>
+         <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/secretária.Ai.png'); background-size: cover; background-position: center; background-color: #003366;">Secretária.Ai</div>
+          <div class="portfolio-overlay">
+            <h3>Secretária.Ai</h3>
+            <p>Secretária virtual (React)</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/siteComidaTipicas.jpeg'); background-size: cover; background-position: center; background-color: #B22222;">Comidas do Brasil</div>
+          <div class="portfolio-overlay">
+            <h3>Comidas do Brasil</h3>
+            <p>Guia gastronômico (HTML/CSS/JS)</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img" style="background-image: url('./img/AppElopro.jpeg'); background-size: cover; background-position: center; background-color: #228B22;">EloPro</div>
+          <div class="portfolio-overlay">
+            <h3>EloPro</h3>
+            <p>App conexão profissionais-clientes (Flutter)</p>
+            <a href="https://elopro.jardelmessias.com.br/elopro.apk" class="btn btn-primary" style="margin-top: 10px; font-size: 12px; padding: 5px 15px;"><i class="fas fa-download"></i> Baixar APK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prices -->
+  <section id="prices">
+    <div class="container">
+      <h2 class="section-title fade-in">Preços</h2>
+      <div class="prices-grid fade-in">
+        <div class="price-card">
+          <h3>Landing Page</h3>
+          <div class="price">R$ 800</div>
+          <small>a partir de</small>
+          <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Quero%20um%20orçamento%20para%20Landing%20Page."
+            class="btn">Solicitar Orçamento</a>
+        </div>
+        <div class="price-card">
+          <h3>Site Institucional</h3>
+          <div class="price">R$ 2.000</div>
+          <small>a partir de</small>
+          <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Quero%20um%20orçamento%20para%20Site%20Institucional."
+            class="btn">Solicitar Orçamento</a>
+        </div>
+        <div class="price-card">
+          <h3>Sistema Web</h3>
+          <div class="price">R$ 4.000</div>
+          <small>a partir de</small>
+          <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Quero%20um%20orçamento%20para%20Sistema%20Web."
+            class="btn">Solicitar Orçamento</a>
+        </div>
+        <div class="price-card">
+          <h3>Aplicativo Mobile</h3>
+          <div class="price">R$ 6.000</div>
+          <small>a partir de</small>
+          <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Quero%20um%20orçamento%20para%20Aplicativo%20Mobile."
+            class="btn">Solicitar Orçamento</a>
+        </div>
+        <div class="price-card">
+          <h3>Consultoria</h3>
+          <div class="price">R$ 300</div>
+          <small>/ hora</small>
+          <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Quero%20um%20orçamento%20para%20Consultoria."
+            class="btn">Solicitar Orçamento</a>
+        </div>
+        <div class="price-card">
+          <h3>Manutenção Mensal</h3>
+          <div class="price">R$ 200</div>
+          <small>a partir de / mês</small>
+          <a href="https://wa.me/5579998061093?text=Oi%20Jardel!%20Quero%20um%20orçamento%20para%20Manutenção%20Mensal."
+            class="btn">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title fade-in">Sobre Mim</h2>
+      <div class="about-grid fade-in">
+        <div class="about-image">
+          <div class="about-photo"><img src= "./img/foto.jpeg" alt="Jardel Messias"></div>
+        </div>
+        <div class="about-text">
+          <h2>Jardel Messias</h2>
+          <p>Desenvolvedor Fullstack apaixonado por tecnologia e inovação. Com experiência em criação de sites,
+            aplicativos e sistemas web, transformo necessidades em soluções digitais eficientes. Busco sempre entregar
+            projetos com qualidade, performance e design moderno.</p>
+          <p>Atualmente em Simão Dias - SE, atendo clientes de todo o Brasil.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">APIs</span>
+            <span class="tech-tag">UI/UX</span>
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Flutter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title fade-in">Dúvidas Frequentes</h2>
+      <div class="faq-grid fade-in">
+        <div class="faq-item">
+          <button class="faq-question">Quanto tempo demora para meu site ficar pronto? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>O prazo varia conforme a complexidade. Landing pages simples levam de 5 a 10 dias. Projetos mais robustos com sistemas integrados podem levar de 20 a 45 dias.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Você oferece manutenção após a entrega? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>Sim! Ofereço planos de manutenção mensal para garantir que seu site esteja sempre atualizado, seguro e performático.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O site vai funcionar bem no celular? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>Com certeza. Todos os meus projetos são desenvolvidos com a metodologia "Mobile First", garantindo uma experiência perfeita em qualquer tamanho de tela.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Como funciona o pagamento? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>Geralmente trabalhamos com 50% de entrada e 50% na entrega. Para projetos maiores, podemos parcelar conforme as etapas de desenvolvimento (milestones).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">Contato</h2>
+      <div class="contact-grid fade-in">
+        <div class="contact-form">
+          <form id="contact-form">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Telefone">
+            <select name="service" required>
+              <option value="">Selecione um serviço</option>
+              <option value="Landing Page">Landing Page</option>
+              <option value="Site Institucional">Site Institucional</option>
+              <option value="Sistema Web">Sistema Web</option>
+              <option value="Aplicativo Mobile">Aplicativo Mobile</option>
+              <option value="Consultoria">Consultoria</option>
+              <option value="Manutenção Mensal">Manutenção Mensal</option>
+              <option value="Outro">Outro</option>
+            </select>
+            <textarea name="message" placeholder="Mensagem" required></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:79998061093">(79) 99806-1093</a>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:jardel.messias.dev@gmail.com">jardel.messias.dev@gmail.com</a>
+          </div>
+          <div class="contact-whatsapp">
+            <a href="https://wa.me/5579998061093" class="btn"
+              style="background: #25D366; color: white; border-color: #25D366;"><i class="fab fa-whatsapp"></i> Fale
+              pelo WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jardel-messias" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/jardelMessias39" target="_blank" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/jardelmessias.dev" target="_blank" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5579998061093" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2026 Jardel Messias — Desenvolvedor Fullstack</p>
+      <p>Feito por Jardel Messias</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Mensagem enviada com sucesso!</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
