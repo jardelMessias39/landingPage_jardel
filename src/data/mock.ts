@@ -173,6 +173,34 @@ export const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Recharts", "Lucide Icons", "Supabase"],
     features: ["Visualização de fluxo de caixa em gráficos de linha e barra", "Indicadores de faturamento, despesa e saldo", "Filtro dinâmico por período e categoria", "Exportação de relatórios resumidos"],
     github: "https://github.com/jardelMessias39/Dashboard-Financeiro-PME"
+  },
+  {
+    id: 6,
+    title: "Condutor Pro",
+    category: "Plataformas de E-learning & SaaS",
+    image: "/condutor-pro-preview.png",
+    description: "Plataforma de e-learning para preparação teórica de candidatos à habilitação, combinando simulados, acompanhamento de desempenho e recursos de Inteligência Artificial para personalizar a revisão dos conteúdos.",
+    context: "Desenvolvido para modernizar o ensino teórico de habilitação, oferecendo aos alunos uma interface imersiva e às autoescolas ferramentas avançadas de controle de participação e desempenho.",
+    problem: "O ensino teórico para habilitação pode ter baixa retenção e pouco feedback individual sobre as dificuldades de cada aluno, além da necessidade das autoescolas de acompanhar a participação nas aulas.",
+    solution: "Uma plataforma que combina simulados cronometrados, análise de desempenho, ranking, acompanhamento das aulas e um tutor baseado em IA que explica os erros do aluno e indica conteúdos para revisão.",
+    result: "Sistema funcional desenvolvido para centralizar estudo, avaliação e acompanhamento dos alunos em uma única plataforma.",
+    technologies: ["Next.js", "React", "TypeScript", "Supabase", "Groq API (Llama 3)", "Tailwind CSS"],
+    features: ["Simulados cronometrados para preparação teórica", "Tutor IA para explicação dos erros e recomendação de revisão", "Acompanhamento de desempenho e evolução do aluno", "Validação de presença e acompanhamento por webcam", "Aulas ao vivo com atualizações em tempo real", "Ranking e painel administrativo"],
+    demo: "https://condutorpro.vercel.app"
+  },
+  {
+    id: 7,
+    title: "Encantos da Ana",
+    category: "Software como Serviço (SaaS)",
+    image: "/encantos-da-ana-preview.png",
+    description: "SaaS para boutiques infantis que combina catálogo digital, gestão da loja e reservas pelo WhatsApp, com arquitetura preparada para atender diferentes lojas com dados isolados.",
+    context: "Criado para atender pequenos e médios lojistas que precisam de uma vitrine digital profissional com controle de catálogo, mas que fecham suas vendas de forma consultiva via WhatsApp.",
+    problem: "Pequenos lojistas precisam de uma presença digital profissional, mas nem sempre precisam de um checkout de e-commerce completo. Muitas vendas ainda dependem de atendimento humano e negociação pelo WhatsApp.",
+    solution: "Uma plataforma com vitrine pública, produtos, categorias, looks e carrinho de reservas, integrada ao WhatsApp, além de um painel administrativo para cada loja gerenciar seu catálogo e informações.",
+    result: "Plataforma SaaS funcional, com ambiente público e painel administrativo, estruturada para permitir a operação de diferentes lojas de forma independente.",
+    technologies: ["React", "TypeScript", "Vite", "Appwrite", "Tailwind CSS", "Framer Motion"],
+    features: ["Catálogo digital com produtos, categorias e looks", "Carrinho de reservas integrado ao WhatsApp", "Painel administrativo para gestão da loja", "Arquitetura multi-tenant com isolamento entre lojas", "Gestão de produtos, banners, looks e avaliações", "Dashboard de faturamento e vendas"],
+    demo: "https://boutique-saas.appwrite.network/"
   }
 ];
 
