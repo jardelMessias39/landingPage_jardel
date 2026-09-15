@@ -259,9 +259,11 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onOpen, onClose }) => 
             )}
             
             {isError && (
-              <div className="flex flex-col items-center justify-center mt-4 p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-xs text-center gap-2">
-                <AlertCircle className="h-4 w-4" />
-                Erro ao conectar com a IA. Tente novamente mais tarde.
+              <div className="mx-auto mt-4 flex max-w-sm items-start gap-3 rounded-xl border border-red-400/30 bg-red-500/10 p-4 text-left text-xs leading-relaxed text-red-300 shadow-[0_0_24px_rgba(239,68,68,0.08)]">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500/15 text-red-300 ring-1 ring-red-400/25">
+                  <AlertCircle className="h-4 w-4" />
+                </span>
+                <span>O Consultor Digital está temporariamente indisponível. Tente novamente em alguns instantes.</span>
               </div>
             )}
             

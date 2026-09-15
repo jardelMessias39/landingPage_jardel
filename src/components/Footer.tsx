@@ -49,6 +49,12 @@ export const Footer: React.FC = () => {
                 </div>
                 GitHub <ArrowUpRight className="h-3 w-3 opacity-50" />
               </a>
+              <a href={profileData.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate-400 hover:text-pink-400 transition-colors text-sm group w-fit">
+                <div className="p-2 rounded-lg bg-white/5 group-hover:bg-pink-500/10 transition-colors">
+                  <Link className="h-4 w-4" />
+                </div>
+                Instagram <ArrowUpRight className="h-3 w-3 opacity-50" />
+              </a>
             </div>
           </div>
 

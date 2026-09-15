@@ -105,6 +105,16 @@ export const Card: React.FC = () => {
               </div>
             </a>
 
+            <a href={profileData.instagram} target="_blank" rel="noopener noreferrer" className="w-full flex items-center p-4 rounded-xl glass-panel border border-white/5 hover:border-white/10 hover:bg-white/[0.03] transition-colors group">
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-300 mr-4 group-hover:scale-110 transition-transform">
+                <Link className="h-5 w-5" />
+              </div>
+              <div className="flex-1 text-left">
+                <h3 className="text-sm font-bold text-white">Instagram</h3>
+                <p className="text-xs text-slate-500">Acompanhe meu trabalho</p>
+              </div>
+            </a>
+
             <a href={`mailto:${profileData.email}`} className="w-full flex items-center p-4 rounded-xl glass-panel border border-white/5 hover:border-white/10 hover:bg-white/[0.03] transition-colors group">
               <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-300 mr-4 group-hover:scale-110 transition-transform">
                 <Mail className="h-5 w-5" />

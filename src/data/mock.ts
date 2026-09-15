@@ -7,6 +7,7 @@ export interface ProfileData {
   phone: string;
   email: string;
   linkedin: string;
+  instagram: string;
   github: string;
 }
 
@@ -60,7 +61,8 @@ export const profileData: ProfileData = {
   location: "Simão Dias - SE, Brasil",
   phone: "(79) 99806-1093",
   email: "jardel.messias.dev@gmail.com",
-  linkedin: "https://www.linkedin.com/in/jardel-messias",
+  linkedin: "https://www.linkedin.com/in/jardel-messias-desenvolvedor",
+  instagram: "https://www.instagram.com/jardelmessias.dev",
   github: "https://github.com/jardelMessias39"
 };
 
