@@ -194,7 +194,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onOpen, onClose }) => 
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-0 right-0 sm:bottom-6 sm:right-6 w-full h-full sm:w-[400px] sm:h-[600px] z-50 flex flex-col sm:rounded-2xl glass-panel shadow-2xl border-t sm:border border-white/10 overflow-hidden bg-[#070a12]/95"
+          className="chatbot-panel fixed inset-0 sm:bottom-6 sm:left-auto sm:top-auto sm:right-6 w-full h-[100dvh] sm:w-[400px] sm:h-[600px] z-50 flex min-h-0 flex-col sm:rounded-2xl glass-panel shadow-2xl border-t sm:border border-white/10 overflow-hidden bg-[#070a12]/95"
         >
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gradient-to-r from-blue-900/20 to-amber-500/10">

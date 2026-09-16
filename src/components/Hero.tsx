@@ -72,9 +72,9 @@ export const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
         </div>
 
         {/* Right Side: Interactive Mockup Showcase */}
-        <div className="relative w-full aspect-square max-w-[550px] mx-auto lg:ml-auto">
+        <div className="relative w-full aspect-[3/4] sm:aspect-square max-w-[550px] mx-auto lg:ml-auto">
           {/* Main Dashboard Widget (Top Left) */}
-          <div className="absolute top-[5%] left-[5%] w-[65%] glass-panel rounded-2xl p-5 shadow-2xl border border-white/10 animate-float duration-5000">
+          <div className="absolute top-[2%] left-0 sm:top-[5%] sm:left-[5%] w-[82%] sm:w-[65%] glass-panel rounded-2xl p-4 sm:p-5 shadow-2xl border border-white/10 animate-float duration-5000">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/5">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
           </div>
 
           {/* AI Flow Automation Widget (Middle Right) */}
-          <div className="absolute top-[35%] right-[2%] w-[60%] glass-panel rounded-2xl p-4 shadow-2xl border border-white/10 animate-float duration-6000">
+          <div className="absolute top-[34%] right-0 sm:top-[35%] sm:right-[-19%] w-[78%] sm:w-[60%] glass-panel rounded-2xl p-3 sm:p-4 shadow-2xl border border-white/10 animate-float duration-6000">
             <div className="flex items-center gap-2.5 mb-3">
               <Bot className="h-4 w-4 text-amber-400" />
               <span className="text-xs font-semibold text-white">Agente Inteligente de Vendas</span>
@@ -130,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onChatOpen }) => {
           </div>
 
           {/* Mobile Application Preview Widget (Bottom Center) */}
-          <div className="absolute bottom-[5%] left-[15%] w-[48%] glass-panel rounded-2xl p-4 shadow-2xl border border-white/10 animate-float duration-7000">
+          <div className="absolute top-[75%] left-[8%] sm:top-auto sm:bottom-[5%] sm:left-[15%] w-[70%] sm:w-[48%] glass-panel rounded-2xl p-3 sm:p-4 shadow-2xl border border-white/10 animate-float duration-7000">
             <div className="flex justify-center mb-3">
               <div className="w-10 h-1 rounded-full bg-white/20"></div>
             </div>
