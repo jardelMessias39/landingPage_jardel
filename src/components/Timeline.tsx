@@ -1,7 +1,10 @@
 import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { timeline } from "../data/mock";
 
 export const Timeline: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section id="timeline" className="relative py-24 px-6 bg-[#070a12] border-t border-white/5">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -18,7 +21,27 @@ export const Timeline: React.FC = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-6 sm:left-1/2 top-0 bottom-0 w-px bg-white/10 sm:-translate-x-1/2"></div>
+          <div className="absolute left-6 sm:left-1/2 top-0 bottom-0 w-px overflow-visible bg-white/10 sm:-translate-x-1/2">
+            {!shouldReduceMotion && (
+              <motion.div
+                aria-hidden="true"
+                initial={{ top: "-4rem", opacity: 0 }}
+                animate={{ top: ["-4rem", "calc(100% - 4rem)"], opacity: [0, 1, 1, 0] }}
+                transition={{ delay: 0.2, duration: 2.4, ease: [0.16, 1, 0.3, 1], times: [0, 0.08, 0.88, 1] }}
+                className="absolute left-1/2 h-16 w-2 -translate-x-1/2 rounded-full bg-gradient-to-b from-transparent via-amber-300 to-transparent shadow-[0_0_14px_rgba(212,175,55,0.7)]"
+              />
+            )}
+            {!shouldReduceMotion && (
+              <motion.div
+                aria-hidden="true"
+                initial={{ scaleY: 0, opacity: 0 }}
+                animate={{ scaleY: 1, opacity: 1 }}
+                transition={{ delay: 0.38, duration: 2.05, ease: [0.16, 1, 0.3, 1] }}
+                style={{ transformOrigin: "top" }}
+                className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-amber-400/70 via-amber-400/20 to-transparent"
+              />
+            )}
+          </div>
 
           <div className="space-y-12">
             {timeline.map((event, index) => {
@@ -42,7 +65,19 @@ export const Timeline: React.FC = () => {
 
                   {/* Center Dot */}
                   <div className="absolute left-6 sm:left-1/2 transform -translate-x-1/2 flex items-center justify-center top-6 sm:top-1/2 sm:-translate-y-1/2">
-                    <div className="w-4 h-4 rounded-full bg-[#070a12] border-2 border-amber-400 group-hover:scale-150 group-hover:shadow-[0_0_15px_rgba(212,175,55,0.6)] transition-all duration-300 z-10"></div>
+                    <motion.div
+                      initial={shouldReduceMotion ? false : { scale: 1, boxShadow: "0 0 0 rgba(212,175,55,0)" }}
+                      animate={shouldReduceMotion ? undefined : {
+                        scale: [1, 1.18, 1],
+                        boxShadow: [
+                          "0 0 0 rgba(212,175,55,0)",
+                          "0 0 18px rgba(212,175,55,0.75)",
+                          "0 0 0 rgba(212,175,55,0)"
+                        ]
+                      }}
+                      transition={{ delay: 0.48 + index * 0.53, duration: 0.42, ease: [0.16, 1, 0.3, 1] }}
+                      className="relative z-10 h-4 w-4 rounded-full border-2 border-amber-400 bg-[#070a12] transition-all duration-300 group-hover:scale-150 group-hover:shadow-[0_0_15px_rgba(212,175,55,0.6)]"
+                    />
                   </div>
 
                   {/* Empty space for alternating layout on desktop */}

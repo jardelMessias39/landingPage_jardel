@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { profileData } from '../data/mock';
 import { Mail, Link, GitBranch, MessageCircle, Globe, Download, Share2 } from 'lucide-react';
 
 export const Card: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
   const whatsappNumber = "5579998061093";
   const whatsappMessage = "Olá Jardel, acessei seu cartão digital e gostaria de conversar sobre um projeto.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -31,11 +33,25 @@ export const Card: React.FC = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[100px] rounded-full pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
 
-      <div className="w-full max-w-sm relative z-10 animate-fade-in">
-        <div className="glass-panel rounded-3xl p-6 border border-white/10 shadow-2xl flex flex-col items-center text-center">
+      <div className="w-full max-w-sm relative z-10">
+        <div className="relative overflow-hidden glass-panel rounded-3xl p-6 border border-white/10 shadow-2xl flex flex-col items-center text-center">
+          {!shouldReduceMotion && (
+            <motion.div
+              aria-hidden="true"
+              initial={{ x: '-160%' }}
+              animate={{ x: '420%' }}
+              transition={{ delay: 0.38, duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-2/5 -skew-x-[18deg] bg-gradient-to-r from-transparent via-amber-200/35 to-transparent blur-sm"
+            />
+          )}
           
           {/* Avatar and Share */}
-          <div className="w-full flex justify-end mb-2">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.56, duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full flex justify-end mb-2"
+          >
             <button 
               onClick={handleShare}
               className="p-2 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
@@ -43,27 +59,49 @@ export const Card: React.FC = () => {
             >
               <Share2 className="h-4 w-4" />
             </button>
-          </div>
+          </motion.div>
           
-          <div className="relative mb-6 group">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.62, duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
+            className="relative mb-6 group"
+          >
             <div className="absolute inset-0 bg-gradient-to-tr from-amber-500 to-blue-500 rounded-full blur-md opacity-40 group-hover:opacity-70 transition-opacity"></div>
             <img 
               src="/avatar-parado.png" 
               alt={profileData.name} 
               className="relative w-32 h-32 rounded-full object-cover border-4 border-[#070a12] shadow-lg"
             />
-          </div>
+          </motion.div>
 
-          <h1 className="text-2xl font-bold text-white tracking-tight mb-1">{profileData.name}</h1>
-          <p className="text-sm font-semibold bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent tracking-widest uppercase mb-4">
-            Software Engineer
-          </p>
-          <p className="text-slate-400 text-sm font-light leading-relaxed mb-8 px-2">
-            {profileData.subtitle}
-          </p>
+          <motion.h1
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08, duration: 0.62, ease: [0.16, 1, 0.3, 1] }}
+            className="text-2xl font-bold text-white tracking-tight mb-1"
+          >
+            {profileData.name}
+          </motion.h1>
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.68, duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col items-center"
+          >
+            <p className="text-sm font-semibold bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent tracking-widest uppercase mb-4">
+              Software Engineer
+            </p>
+            <p className="text-slate-400 text-sm font-light leading-relaxed mb-8 px-2">
+              {profileData.subtitle}
+            </p>
+          </motion.div>
 
           {/* Main Action - WhatsApp */}
-          <a 
+          <motion.a
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.88, duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -71,10 +109,15 @@ export const Card: React.FC = () => {
           >
             <MessageCircle className="h-5 w-5" />
             Conversar no WhatsApp
-          </a>
+          </motion.a>
 
           {/* Social Links */}
-          <div className="w-full space-y-3 mb-8">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.74, duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full space-y-3 mb-8"
+          >
             <a href="/" className="w-full flex items-center p-4 rounded-xl glass-panel border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.03] transition-colors group">
               <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mr-4 group-hover:scale-110 transition-transform">
                 <Globe className="h-5 w-5" />
@@ -124,16 +167,19 @@ export const Card: React.FC = () => {
                 <p className="text-xs text-slate-500">Contato direto</p>
               </div>
             </a>
-          </div>
+          </motion.div>
 
-          <a 
+          <motion.a
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
             href={vcardLink} 
             download="Jardel_Messias.vcf"
             className="flex items-center gap-2 text-sm text-slate-400 hover:text-amber-400 transition-colors"
           >
             <Download className="h-4 w-4" />
             Salvar Contato (VCF)
-          </a>
+          </motion.a>
         </div>
         
         <div className="text-center mt-6">

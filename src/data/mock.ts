@@ -214,24 +214,24 @@ export const skills = {
 
 export const timeline: TimelineEvent[] = [
   {
-    year: "2023",
-    title: "Primeiros Projetos",
-    description: "Início do desenvolvimento de aplicações web clássicas e soluções lógicas com lógica de programação, JavaScript e arquiteturas dinâmicas em HTML/CSS."
+    year: "Maio 2025",
+    title: "Início na área de desenvolvimento",
+    description: "Início na área de desenvolvimento."
   },
   {
-    year: "2024",
+    year: "Agosto 2025",
     title: "Aplicações Web & Integrações",
-    description: "Construção de aplicações completas com React, Node.js e consumo de APIs de terceiros. Foco em criar experiências de usuário robustas e painéis de controle operacionais."
+    description: "Foi aproximadamente nesse período que desenvolvi meu primeiro site de comidas típicas e comecei a trabalhar com aplicações web e integrações."
   },
   {
-    year: "2025",
+    year: "Janeiro/Fevereiro 2026",
     title: "Sistemas SaaS & Mobile",
-    description: "Lançamento de softwares sob medida, portais de agendamento online e aplicativos móveis com Flutter. Integrações comerciais seguras de pagamento e controle de banco de dados."
+    description: "Foi entre janeiro e fevereiro de 2026 que comecei a desenvolver meu primeiro SaaS e posteriormente evoluí para aplicações mobile."
   },
   {
-    year: "2026",
-    title: "IA & Automação Inteligente",
-    description: "Desenvolvimento de agentes de conversação autônomos integrados a fluxos corporativos reais de WhatsApp, gerando automação e economia para pequenas e médias empresas."
+    year: "Junho 2026",
+    title: "Engenharia de Software, IA e Automação",
+    description: "A partir de junho de 2026 começou uma nova fase de evolução técnica envolvendo engenharia de software, IA, automação e projetos mais complexos."
   }
 ];
 
